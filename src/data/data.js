@@ -1,0 +1,48 @@
+export let ItemType = {
+    DECOR: "decorations",
+    STAIR: "stairs",
+}
+export let sceneItems = [
+    {name: "plant1", group: "decorations", x: 456, y: -42, resource: "./images/plant.png", visible: true},
+    {name: "plant2", group: "decorations", x: 1135, y: 164, resource: "./images/plant.png", visible: true},
+    {name: "table", group: "decorations", x: 202, y: 196, resource: "./images/table.png", visible: true},
+    {name: "globe", group: "decorations", x: 87, y: 109, resource: "./images/globe.png", visible: true},
+    {name: "bookstand", group: "decorations", x: 834, y: -28, resource: "./images/bookstand.png", visible: true},
+    {name: "sofa", group: "decorations", x:127, y: 324, resource: "./images/sofa.png", visible: true},
+    {name: "stair_old", group: "decorations", x: 1070, y: 20, resource: "./images/stair_old.png", visible: true},
+    {name: "man", group: "decorations", x: 1030, y: 40, resource: "./images/man.png", visible: true},
+    {name: "stair_1", group: "stair_1", x: 1083, y: 89, resource: "./images/stair_1.png", visible: false},
+
+    {name: "stair_carpet_1", group: "stair_1", x: 1106, y: 85, resource: "./images/stair_carpet_1.png", visible: false},
+    {name: "stair_holders_1", group: "stair_1", x: 1089, y: -40, resource: "./images/stair_holders_1.png", visible: false},
+    {name: "stair_2", group: "stair_2", x: 1083, y: 89, resource: "./images/stair_2.png", visible: false},
+    {name: "stair_carpet_2", group: "stair_2", x: 1076, y: 82, resource: "./images/stair_carpet_2.png", visible: false},
+    {name: "stair_holders_2", group: "stair_2", x: 1082, y: 42, resource: "./images/stair_holders_2.png", visible: false},
+    {name: "stair_3", group: "stair_3", x: 1083, y: 89, resource: "./images/stair_3.png", visible: false},
+    {name: "stair_carpet_3", group: "stair_3", x: 1102, y: 71, resource: "./images/stair_carpet_3.png", visible: false},
+    {name: "stair_holders_3", group: "stair_3", x: 1092, y: -33, resource: "./images/stair_holders_3.png", visible: false},
+    {name: "hammer", group: "select", x: 1160, y: 220, resource: "./images/hammer.png", visible: true},
+
+    {name: "bigPlant", group: "decorations_upper", x: 1125, y: 460, resource: "./images/bigplant.png", visible: true},
+
+    {name: "pad_1", group: "select", x: 920, y: 250, resource: "./images/pad.png", visible: false},
+    {name: "pad_2", group: "select", x: 1060, y: 150, resource: "./images/pad.png", visible: false},
+    {name: "pad_3", group: "select", x: 1240, y: 100, resource: "./images/pad.png", visible: false},
+    {name: "pad_1_pressed", group: "select", x: 920, y: 250, resource: "./images/pad_pressed.png", visible: false},
+    {name: "pad_2_pressed", group: "select", x: 1060, y: 150, resource: "./images/pad_pressed.png", visible: false},
+    {name: "pad_3_pressed", group: "select", x: 1240, y: 100, resource: "./images/pad_pressed.png", visible: false},
+    {name: "pad_1_chosen", group: "select", x: 924, y: 250, resource: "./images/pad_chosen.png", visible: false},
+    {name: "pad_2_chosen", group: "select", x: 1064, y: 150, resource: "./images/pad_chosen.png", visible: false},
+    {name: "pad_3_chosen", group: "select", x: 1244, y: 100, resource: "./images/pad_chosen.png", visible: false},
+    {name: "pad_1_tmb", group: "select", x: 948, y: 277, resource: "./images/stair_tmb_1.png", visible: false},
+    {name: "pad_2_tmb", group: "select", x: 1090, y: 174, resource: "./images/stair_tmb_2.png", visible: false},
+    {name: "pad_3_tmb", group: "select", x: 1268, y: 127, resource: "./images/stair_tmb_3.png", visible: false},
+    {name: "pad_1_ok", group: "select", x: 912, y: 360, resource: "./images/btn_ok.png", visible: false},
+    {name: "pad_2_ok", group: "select", x: 1052, y: 260, resource: "./images/btn_ok.png", visible: false},
+    {name: "pad_3_ok", group: "select", x: 1232, y: 210, resource: "./images/btn_ok.png", visible: false},
+
+    {name: "final_back", group: "menu", x: 0, y: 0, resource: "./images/final_back.png", visible: false},
+    {name: "final", group: "menu", x: 425, y: 50, resource: "./images/final.png", visible: false},
+    {name: "logo", group: "menu", x: 20, y: 20, resource: "./images/logo.png", visible: true},
+    {name: "btnContinue", group: "menu", x: 548, y: 488, resource: "./images/btn_continue.png", visible: true},
+];
