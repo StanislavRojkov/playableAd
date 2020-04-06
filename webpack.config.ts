@@ -20,7 +20,7 @@ module.exports = {
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            title: 'MRS-fieldlog',
+            title: 'PlayableAd',
             inject: false,
             hash: true,
             template: './src/index.ejs',
