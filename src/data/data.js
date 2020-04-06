@@ -11,8 +11,8 @@ export let sceneItems = [
     {name: "sofa", group: "decorations", x:127, y: 324, resource: "./images/sofa.png", visible: true},
     {name: "stair_old", group: "decorations", x: 1070, y: 20, resource: "./images/stair_old.png", visible: true},
     {name: "man", group: "decorations", x: 1030, y: 40, resource: "./images/man.png", visible: true},
-    {name: "stair_1", group: "stair_1", x: 1083, y: 89, resource: "./images/stair_1.png", visible: false},
 
+    {name: "stair_1", group: "stair_1", x: 1083, y: 89, resource: "./images/stair_1.png", visible: false},
     {name: "stair_carpet_1", group: "stair_1", x: 1106, y: 85, resource: "./images/stair_carpet_1.png", visible: false},
     {name: "stair_holders_1", group: "stair_1", x: 1089, y: -40, resource: "./images/stair_holders_1.png", visible: false},
     {name: "stair_2", group: "stair_2", x: 1083, y: 89, resource: "./images/stair_2.png", visible: false},

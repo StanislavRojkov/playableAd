@@ -34,17 +34,21 @@ import "./images/man.png";
 import {sceneItems} from "./data/data";
 
 window.PIXI = PIXI;
+window.onresize = resize;
 
 let Application = PIXI.Application;
 let Sprite = PIXI.Sprite;
 let charm = new Charm(PIXI);
 
+const WIDTH = 1390;
+const HEIGHT = 640;
+
 let app = new Application({
-        width: 1390,
-        height: 640,
+        width: WIDTH,
+        height: HEIGHT,
         antialias: true,
         transparent: false,
-        resolution: 1
+        resolution: 1,
     }
 );
 
@@ -66,10 +70,14 @@ app.loader
 let decorations = {};
 let itemGroups = {};
 let back;
+let mainContainer = new PIXI.Container();
 let selectedPadNumber;
 
 function setup() {
     back = new Sprite(resources["./images/back.png"].texture);
+    back.anchor.set(0.5, 0.5);
+    back.position.set(back.width / 2, back.height / 2);
+
     app.stage.addChild(back);
     sceneItems.map(item => {
         if (!itemGroups[item.group]) itemGroups[item.group] = new PIXI.Container();
@@ -90,9 +98,13 @@ function setup() {
         setMenuPad(i);
     }
 
+    mainContainer.addChild(back);
     for (let key in itemGroups) {
-        app.stage.addChild(itemGroups[key]);
+        mainContainer.addChild(itemGroups[key]);
     }
+    app.stage.addChild(mainContainer);
+
+    resize();
 
     itemGroups.stair_1.visible = false;
     itemGroups.stair_2.visible = false;
@@ -222,4 +234,24 @@ function onMenuDown() {
     decorations.final.visible = true;
     decorations.final.alpha = true;
     charm.fadeIn(decorations.final, 15);
+}
+
+function resize() {
+    const appWidth = window.innerWidth - 20;
+    const appHeigth = window.innerHeight - 20;
+    app.renderer.resize(appWidth, appHeigth);
+
+    let scaleKoef;
+    let posX = 0;;
+    let posY = 0;
+
+    if (WIDTH / HEIGHT <= appWidth / appHeigth) {
+        scaleKoef = appHeigth / HEIGHT;
+        posX = (appWidth - WIDTH * scaleKoef) / 2;
+    } else {
+        scaleKoef = appWidth / WIDTH;
+        posY = (appHeigth - HEIGHT * scaleKoef) / 2;
+    }
+    mainContainer.scale.set(scaleKoef);
+    mainContainer.position.set(posX, posY);
 }
